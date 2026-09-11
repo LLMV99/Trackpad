@@ -1,9 +1,9 @@
 #include <physical_layouts.dtsi>
 
 / {
-    physical_layout_trackpad: physical_layout_trackpad {
+    physical_layout_trackpad_i2c: physical_layout_trackpad_i2c {
         compatible = "zmk,physical-layout";
-        display-name = "Trackpad";
+        display-name = "trackpad I2C";
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
             ;

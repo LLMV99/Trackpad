@@ -1,8 +1,8 @@
-if SHIELD_TRACKPAD
+if SHIELD_TRACKPAD_I2C
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "Trackpad"
+    default "trackpad I2C"
 
 config ZMK_POINTING
     default y
@@ -10,9 +10,9 @@ config ZMK_POINTING
 endif
 
 # --- Pinctrl Kconfig for part "unibody" ---
-if BOARD_NICE_NANO_V2 && SHIELD_TRACKPAD
+if BOARD_NICE_NANO_V2 && SHIELD_TRACKPAD_I2C
 
-config SPI
+config I2C
     default y
 
 endif

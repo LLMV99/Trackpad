@@ -1,6 +1,6 @@
 {
   "layouts": {
-    "trackpad": {
+    "trackpad_i2c": {
       "layout": [
         { "row": 0, "col": 0, "x": 0, "y": 0 }
       ]

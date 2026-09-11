@@ -1,4 +1,4 @@
-name: zmk-keyboard-trackpad
+name: zmk-keyboard-trackpad-i2c
 build:
   settings:
     board_root: .

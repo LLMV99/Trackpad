@@ -1,4 +1,4 @@
-#include "trackpad.dtsi"
+#include "trackpad_i2c.dtsi"
 
 / {
     kscan0: kscan0 {
@@ -7,16 +7,16 @@
         wakeup-source;
 
         col-gpios
-            = <&pro_micro 20 GPIO_ACTIVE_HIGH>
+            = <&pro_micro 16 GPIO_ACTIVE_HIGH>
             ;
 
         row-gpios
-            = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 };
 
-&physical_layout_trackpad {
+&physical_layout_trackpad_i2c {
     kscan = <&kscan0>;
 };
 // == Input devices ==
