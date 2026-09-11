@@ -1,2 +1,0 @@
-config SHIELD_TRACKPAD_I2C
-    def_bool $(shields_list_contains,trackpad_i2c)
