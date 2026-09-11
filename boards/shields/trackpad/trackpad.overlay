@@ -1,0 +1,29 @@
+#include "trackpad.dtsi"
+
+/ {
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+                diode-direction = "col2row";
+        wakeup-source;
+
+        col-gpios
+            = <&pro_micro 20 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+};
+
+&physical_layout_trackpad {
+    kscan = <&kscan0>;
+};
+// == Input devices ==
+// Input devices on this central part
+// Enabling input listeners and pointing them to the input devices
+&input_listener_unibody0 {
+    status = "okay";
+    device = <&input_device_unibody0>;
+};
+

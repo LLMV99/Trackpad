@@ -1,0 +1,11 @@
+#include <physical_layouts.dtsi>
+
+/ {
+    physical_layout_trackpad: physical_layout_trackpad {
+        compatible = "zmk,physical-layout";
+        display-name = "Trackpad";
+        keys  //                     w   h    x    y     rot    rx    ry
+            = <&key_physical_attrs 100 100    0    0       0     0     0>
+            ;
+    };
+};
