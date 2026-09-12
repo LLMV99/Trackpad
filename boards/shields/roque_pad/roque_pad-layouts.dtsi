@@ -1,9 +1,9 @@
 #include <physical_layouts.dtsi>
 
 / {
-    physical_layout_trackpad: physical_layout_trackpad {
+    physical_layout_roque_pad: physical_layout_roque_pad {
         compatible = "zmk,physical-layout";
-        display-name = "Trackpad";
+        display-name = "Roque Pad";
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
             ;

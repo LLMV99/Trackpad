@@ -1,4 +1,4 @@
-name: zmk-keyboard-trackpad
+name: zmk-keyboard-roque-pad
 build:
   settings:
     board_root: .

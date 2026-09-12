@@ -1,4 +1,4 @@
-#include "trackpad-layouts.dtsi"
+#include "roque_pad-layouts.dtsi"
 #include <dt-bindings/zmk/matrix_transform.h>
 
 / {
@@ -12,7 +12,7 @@
     };
 };
 
-&physical_layout_trackpad {
+&physical_layout_roque_pad {
     transform = <&matrix_transform0>;
 };
 
