@@ -26,21 +26,24 @@
 &i2c0 {
     compatible = "nordic,nrf-twim";
     status = "okay";
+
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
-    clock-frequency = <I2C_BITRATE_FAST>;
-};
+    clock-frequency = <400000>;
 
-// devices on i2c0
-
-&i2c0 {
-    input_device_unibody0: input_device_unibody0@2a {
-        status = "okay";
-        compatible = "cirque,pinnacle";
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle2";
         reg = <0x2a>;
-        dr-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        x-invert;
-        sensitivity = "3x";
+        status = "okay";
+        data-ready-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
+        sensitivity = "2x";
+        data-mode = "absolute"; /* or "relative" for the ASIC's stock behavior */
+        absolute-relative-divisor = <8>;
+        absolute-touch-min-z = <1>;
+        primary-tap-enable;
+        glide-extend-enable; /* Used only when switching to relative mode. */
+        sleep-mode-enable;
+        invert-y;
     };
 };
