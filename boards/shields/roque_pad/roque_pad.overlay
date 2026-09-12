@@ -24,6 +24,6 @@
 // Enabling input listeners and pointing them to the input devices
 &input_listener_unibody0 {
     status = "okay";
-    device = <&input_device_unibody0>;
+    device = <&glidepoint>;
 };
 
