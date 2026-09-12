@@ -41,6 +41,6 @@
         reg = <0x2a>;
         dr-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
         x-invert;
-        sensitivity = "3x";
+        sensitivity = "2x";
     };
 };
