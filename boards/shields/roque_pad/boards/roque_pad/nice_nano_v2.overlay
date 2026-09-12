@@ -40,11 +40,7 @@
         compatible = "cirque,pinnacle";
         reg = <0x2a>;
         dr-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
-        sleep;
-        no-secondary-tap;
-        sensitivity = "2x";
-
-        // Enable the primary tap/click and invert the X axis.
         x-invert;
+        sensitivity = "3x";
     };
 };
