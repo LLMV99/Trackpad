@@ -1,19 +1,29 @@
 #include "roque_pad.dtsi"
 
 / {
-    chosen {
-        zmk,kscan = &mock_kscan;
-    };
+    kscan0: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+                diode-direction = "col2row";
+        wakeup-source;
 
-    mock_kscan: mock_kscan {
-        compatible = "zmk,kscan-mock";
-        columns = <0>;
-        rows = <0>;
-        events = <0>;
+        col-gpios
+            = <&pro_micro 20 GPIO_ACTIVE_HIGH>
+            ;
+
+        row-gpios
+            = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
     };
 };
 
+&physical_layout_roque_pad {
+    kscan = <&kscan0>;
+};
+// == Input devices ==
+// Input devices on this central part
+// Enabling input listeners and pointing them to the input devices
 &input_listener_unibody0 {
     status = "okay";
-    device = <&glidepoint>;
+    device = <&input_device_unibody0>;
 };
+
