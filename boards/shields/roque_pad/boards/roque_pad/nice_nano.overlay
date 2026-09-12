@@ -36,7 +36,7 @@
         compatible = "cirque,pinnacle2";
         reg = <0x2a>;
         status = "okay";
-        data-ready-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
+        data-ready-gpios = <&gpio0 8 GPIO_ACTIVE_HIGH>;
         sensitivity = "2x";
         data-mode = "absolute"; /* or "relative" for the ASIC's stock behavior */
         absolute-relative-divisor = <8>;
@@ -44,6 +44,6 @@
         primary-tap-enable;
         glide-extend-enable; /* Used only when switching to relative mode. */
         sleep-mode-enable;
-        invert-y;
+        invert-x;
     };
 };
