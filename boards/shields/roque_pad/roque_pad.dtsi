@@ -1,22 +1,4 @@
-#include "roque_pad-layouts.dtsi"
-#include <dt-bindings/zmk/matrix_transform.h>
-
-/ {
-    matrix_transform0: matrix_transform0 {
-        compatible = "zmk,matrix-transform";
-        columns = <1>;
-        rows = <1>;
-        map = <
-            RC(0,0)
-        >;
-    };
-};
-
-&physical_layout_roque_pad {
-    transform = <&matrix_transform0>;
-};
-
-// Input devices
+/* Input device split/listener definition. */
 / {
     split_inputs {
         #address-cells = <1>;
@@ -35,4 +17,3 @@
         device = <&input_split_unibody0>;
     };
 };
-
