@@ -1,6 +1,6 @@
 {
   "layouts": {
-    "roque_pad": {
+    "roque_pad_spi": {
       "layout": [
         { "row": 0, "col": 0, "x": 0, "y": 0 }
       ]

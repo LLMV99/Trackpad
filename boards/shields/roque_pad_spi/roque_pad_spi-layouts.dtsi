@@ -1,9 +1,9 @@
 #include <physical_layouts.dtsi>
 
 / {
-    physical_layout_roque_pad: physical_layout_roque_pad {
+    physical_layout_roque_pad_spi: physical_layout_roque_pad_spi {
         compatible = "zmk,physical-layout";
-        display-name = "Roque Pad";
+        display-name = "Roque Pad SPI";
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0       0     0     0>
             ;

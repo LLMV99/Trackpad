@@ -21,16 +21,16 @@
 include:
 
   - board: nice_nano_v2
-    shield: roque_pad
+    shield: roque_pad_spi
 
 ## To build with ZMK Studio support, uncomment the following block
 ## by removing the leading '#' from each line.
 
 #  - board: nice_nano_v2
-#    shield: roque_pad
+#    shield: roque_pad_spi
 #    snippet: studio-rpc-usb-uart
 #    cmake-args: -DCONFIG_ZMK_STUDIO=y
-#    artifact-name: roque_pad_with_studio
+#    artifact-name: roque_pad_spi_with_studio
 
   - board: nice_nano_v2
     shield: settings_reset

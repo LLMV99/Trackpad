@@ -1,4 +1,4 @@
-#include "roque_pad.dtsi"
+#include "roque_pad_spi.dtsi"
 
 / {
     kscan0: kscan0 {
@@ -16,7 +16,7 @@
     };
 };
 
-&physical_layout_roque_pad {
+&physical_layout_roque_pad_spi {
     kscan = <&kscan0>;
 };
 // == Input devices ==

@@ -1,8 +1,8 @@
-if SHIELD_ROQUE_PAD
+if SHIELD_ROQUE_PAD_SPI
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
-    default "Roque Pad"
+    default "Roque Pad SPI"
 
 config ZMK_POINTING
     default y
@@ -10,9 +10,9 @@ config ZMK_POINTING
 endif
 
 # --- Pinctrl Kconfig for part "unibody" ---
-if BOARD_NICE_NANO_V2 && SHIELD_ROQUE_PAD
+if BOARD_NICE_NANO_V2 && SHIELD_ROQUE_PAD_SPI
 
-config I2C
+config SPI
     default y
 
 endif
